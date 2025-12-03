@@ -80,7 +80,7 @@ RUTA_DB_APUNTE = os.path.join(RUTA_S10,"aim_scores.json")
 bd_reaccion = {"jugadores": {}}
 bd_apunte = {"jugadores": {}}
 
-def cargar_bd_reaccion():
+def cargar_bd_reaccion(): #Andrés Pérez Reyes
     """
     Carga la base de datos de tiempos de reacción desde JSON.
     """
@@ -96,7 +96,7 @@ def cargar_bd_reaccion():
         bd_reaccion = {"jugadores": {}}
         guardar_bd_reaccion()
 
-def guardar_bd_reaccion():
+def guardar_bd_reaccion(): #Andrés Pérez Reyes
     """Guarda la base de datos de tiempos de reacción en JSON."""
     with open(RUTA_DB_REACCION,"w") as f:
         json.dump(bd_reaccion,f,indent=4)
@@ -122,7 +122,7 @@ def guardar_bd_apunte():
     with open(RUTA_DB_APUNTE,"w") as f:
         json.dump(bd_apunte,f,indent=4)
 
-def registrar_usuario(nombre):
+def registrar_usuario(nombre): #Andrés Pérez Reyes
     """
     Registra un usuario nuevo si no existe en ambas bases de datos.
     """
@@ -133,7 +133,7 @@ def registrar_usuario(nombre):
     guardar_bd_reaccion()
     guardar_bd_apunte()
 
-def actualizar_tiempo(nombre, tiempo):
+def actualizar_tiempo(nombre, tiempo): #Andrés Pérez Reyes
     """
     Actualiza el mejor tiempo de reacción de un usuario.
     """
