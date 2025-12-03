@@ -101,7 +101,7 @@ def guardar_bd_reaccion(): #Andrés Pérez Reyes
     with open(RUTA_DB_REACCION,"w") as f:
         json.dump(bd_reaccion,f,indent=4)
 
-def cargar_bd_apunte():
+def cargar_bd_apunte(): #JAVI
     """
     Carga la base de datos de puntuaciones de Aim Training.
     """
@@ -117,7 +117,7 @@ def cargar_bd_apunte():
         bd_apunte = {"jugadores": {}}
         guardar_bd_apunte()
 
-def guardar_bd_apunte():
+def guardar_bd_apunte(): #JAVI
     """Guarda la base de datos de puntuaciones de Aim Training."""
     with open(RUTA_DB_APUNTE,"w") as f:
         json.dump(bd_apunte,f,indent=4)
@@ -143,7 +143,7 @@ def actualizar_tiempo(nombre, tiempo): #Andrés Pérez Reyes
         return True
     return False
 
-def actualizar_puntuacion_apunte(nombre, puntos):
+def actualizar_puntuacion_apunte(nombre, puntos): #JAVI
     """
     Actualiza la puntuación de Aim Training de un usuario si es mejor.
     """
@@ -151,7 +151,7 @@ def actualizar_puntuacion_apunte(nombre, puntos):
         bd_apunte["jugadores"][nombre] = puntos
         guardar_bd_apunte()
 
-def obtener_todos_los_puntajes(modo="reaccion"):
+def obtener_todos_los_puntajes(modo="reaccion"): #JAVI
     """
     Retorna todos los puntajes ordenados según modo.
     """
